@@ -65,26 +65,32 @@ const AvoMenu = () => {
     {
       id: 1,
       title: "Add Money",
+      image:Imagepath.addMoney
     },
     {
       id: 2,
       title: "Send / Request",
+      image:Imagepath.sendRequest
     },
     {
       id: 3,
       title: "Sim Services",
+      image:Imagepath.simServices
     },
     {
       id: 4,
       title: "Bills",
+      image:Imagepath.bills
     },
     {
       id: 5,
       title: "Accounts",
+      image:Imagepath.accounts
     },
     {
       id: 5,
       title: "Recurring bills",
+      image:Imagepath.recurring
     },
   ];
 
@@ -119,6 +125,7 @@ const AvoMenu = () => {
       <Header />
       <ScrollView
         style={{ flex: 1, paddingHorizontal: 25, paddingVertical: 5 }}
+        showsVerticalScrollIndicator={false}
       >
         <TextInputComp value={searchTxt} onChangeTxt={setSearchTxt} />
 
@@ -153,11 +160,11 @@ const AvoMenu = () => {
         </View>
             
         <View style={{ marginVertical: 20 }}>
-          {avoMenuOptions?.map((item) => {
+          {avoMenuOptions?.map((item, index) => {
             return (
-              <View style={styles.optionView}>
+              <View key={index} style={styles.optionView}>
                 <View style={commonStyles.rowAlignCen}>
-                  <Image source={Imagepath.addMoney} style={styles.optionImg} />
+                  <Image source={item.image} style={styles.optionImg} />
                   <Text>{item?.title}</Text>
                 </View>
                 <Image
