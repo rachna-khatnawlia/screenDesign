@@ -11,10 +11,10 @@ const Header = () => {
         <Image
           source={Imagepath.backArrow}
           resizeMode="contain"
-          style={{ height: 23, width: 23 }}
+          style={{ height: 14, width: 14 }}
         />
       </View>
-      <Text style={commonStyles.semiBold18}>Avo Menu</Text>
+      <Text style={commonStyles.semiBold20}>Avo Menu</Text>
       <View style={{ minWidth: 50 }} />
     </View>
   );
@@ -24,7 +24,7 @@ const Header = () => {
 const styles = StyleSheet.create({
   container: {
     ...commonStyles.rowSpaceBetweenCenter,
-    paddingHorizontal: 15,
+    paddingHorizontal: 25,
     paddingVertical: 10,
   },
 });

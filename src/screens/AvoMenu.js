@@ -19,7 +19,9 @@ import Colors from "../Styles/Colors";
 // create a component
 const { height, width } = Dimensions.get("window");
 const AvoMenu = () => {
-    const [searchTxt, setSearchTxt] = useState("")
+  const [searchTxt, setSearchTxt] = useState("")
+
+  // Dummy contact Details
   const dummyContacts = [
     {
       id: 1,
@@ -57,6 +59,8 @@ const AvoMenu = () => {
       color: Colors.black,
     },
   ];
+
+  // Dummy Tab Buttons
   const avoMenuOptions = [
     {
       id: 1,
@@ -114,9 +118,9 @@ const AvoMenu = () => {
     <View style={styles.container}>
       <Header />
       <ScrollView
-        style={{ flex: 1, paddingHorizontal: 15, paddingVertical: 5 }}
+        style={{ flex: 1, paddingHorizontal: 25, paddingVertical: 5 }}
       >
-        <TextInputComp value={searchTxt} onChangeTxt={setSearchTxt}/>
+        <TextInputComp value={searchTxt} onChangeTxt={setSearchTxt} />
 
         <View style={styles.contactListView}>
           <View
@@ -147,7 +151,7 @@ const AvoMenu = () => {
             }}
           />
         </View>
-
+            
         <View style={{ marginVertical: 20 }}>
           {avoMenuOptions?.map((item) => {
             return (
@@ -183,14 +187,14 @@ const styles = StyleSheet.create({
     padding: 15,
     paddingVertical: 12,
     borderRadius: 15,
-    marginBottom: 15,
+    marginBottom: 25,
   },
   contactIconView: {
     height: width / 7.5,
     width: width / 7.5,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius:  width / 7.5,
+    borderRadius: width / 7.5,
     marginBottom: 7,
   },
   optionImg: {
