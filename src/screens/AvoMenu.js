@@ -65,32 +65,32 @@ const AvoMenu = () => {
     {
       id: 1,
       title: "Add Money",
-      image:Imagepath.addMoney
+      image: Imagepath.addMoney
     },
     {
       id: 2,
       title: "Send / Request",
-      image:Imagepath.sendRequest
+      image: Imagepath.sendRequest
     },
     {
       id: 3,
       title: "Sim Services",
-      image:Imagepath.simServices
+      image: Imagepath.simServices
     },
     {
       id: 4,
       title: "Bills",
-      image:Imagepath.bills
+      image: Imagepath.bills
     },
     {
       id: 5,
       title: "Accounts",
-      image:Imagepath.accounts
+      image: Imagepath.accounts
     },
     {
       id: 5,
       title: "Recurring bills",
-      image:Imagepath.recurring
+      image: Imagepath.recurring
     },
   ];
 
@@ -143,7 +143,7 @@ const AvoMenu = () => {
               </Text>
               <Image
                 source={Imagepath.rightArrow}
-                style={{ height: 15, width: 15, tintColor: "#0000f5" }}
+                style={{ height: 6, width: 12, marginLeft: 3, tintColor: "#0000f5" }}
               />
             </TouchableOpacity>
           </View>
@@ -158,7 +158,7 @@ const AvoMenu = () => {
             }}
           />
         </View>
-            
+
         <View style={{ marginVertical: 20 }}>
           {avoMenuOptions?.map((item, index) => {
             return (
@@ -169,7 +169,7 @@ const AvoMenu = () => {
                 </View>
                 <Image
                   source={Imagepath.rightArrow}
-                  style={{ height: 20, width: 20 }}
+                  style={{ height: 10, width: 18 }}
                 />
               </View>
             );
@@ -192,6 +192,7 @@ const styles = StyleSheet.create({
     ...commonStyles.rowSpaceBetweenCenter,
     backgroundColor: Colors.greyEF,
     padding: 15,
+    paddingEnd: 45,
     paddingVertical: 12,
     borderRadius: 15,
     marginBottom: 25,
